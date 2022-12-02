@@ -8,7 +8,8 @@ import { TestSelectComponent } from './components/test-select/test-select.compon
 import { TestNumberComponent } from './components/test-number/test-number.component';
 import { TestCheckboxComponent } from './components/test-checkbox/test-checkbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -26,10 +27,11 @@ import { MatBadgeModule } from '@angular/material/badge';
     BrowserAnimationsModule,
     FormsModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule,
+    MatInputModule,
     MatBadgeModule,
+    MatSelectModule,
   ],
-  exports: [MatCheckboxModule, MatProgressSpinnerModule, MatBadgeModule],
+  exports: [MatCheckboxModule, MatInputModule, MatBadgeModule, MatSelectModule],
   providers: [],
   bootstrap: [AppComponent],
 })
