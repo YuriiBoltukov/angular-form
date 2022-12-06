@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TestInputComponent } from './components/test-input/test-input.component';
@@ -13,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { MatBadgeModule } from '@angular/material/badge';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatCheckboxModule,
     MatInputModule,
     MatBadgeModule,
     MatSelectModule,
+    MatButtonModule,
+    HttpClientModule,
   ],
-  exports: [MatCheckboxModule, MatInputModule, MatBadgeModule, MatSelectModule],
   providers: [],
   bootstrap: [AppComponent],
 })

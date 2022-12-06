@@ -1,12 +1,9 @@
-<form class="example-form">
-  <p>Input</p>
-  <mat-form-field class="example-full-width">
-    <mat-label>label</mat-label>
-    <input matInput value="label" />
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="label"></textarea>
-  </mat-form-field>
-</form>
+<mat-form-field [formGroup]="parentForm" class="example-full-width">
+  <mat-label>{{ fieldData.label }}</mat-label>
+  <input
+    matInput
+    required
+    [formControlName]="fieldData.controlName"
+    [value]="getField.value"
+  />
+</mat-form-field>

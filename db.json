@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "label": "Имя",
+      "controlName": "firstName",
+      "description": " Lorem ipsum dolor sit amet.",
+      "type": "text",
+      "componentType": "input",
+      "disabled": false,
+      "required": true,
+      "value": "lorem"
+    },
+    {
+      "label": "Фамилия",
+      "controlName": "lastName",
+      "description": " Lorem ipsum dolor sit amet.",
+      "componentType": "input",
+      "type": "text",
+      "disabled": false,
+      "required": true,
+      "value": "lorem"
+    },
+    {
+      "label": "Телефон",
+      "controlName": "telephone",
+      "description": " Lorem ipsum dolor sit amet.",
+      "componentType": "input",
+      "type": "tel",
+      "disabled": false,
+      "required": true,
+      "value": "lorem"
+    },
+    {
+      "label": "Должность",
+      "required": false,
+      "controlName": "roleChoise",
+      "description": " Lorem ipsum dolor sit amet.",
+      "choices": ["option1", "option2", "option3"],
+      "componentType": "select",
+      "type": "select",
+      "disabled": false,
+      "value": "lorem"
+    },
+    {
+      "label": "Возвраст",
+      "required": false,
+      "controlName": "personAge",
+      "description": " Lorem ipsum dolor sit amet.",
+      "componentType": "input",
+      "type": "number",
+      "disabled": false,
+      "value": "lorem"
+    },
+    {
+      "label": "Согласие на обработку персональных данных",
+      "controlName": "agree",
+      "description": " Lorem ipsum dolor sit amet.",
+      "componentType": "input",
+      "type": "checkbox",
+      "disabled": false,
+      "required": true,
+      "value": false
+    }
+  ]
+}

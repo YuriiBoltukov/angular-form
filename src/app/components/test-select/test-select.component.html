@@ -1,9 +1,11 @@
-<h4>Basic mat-select</h4>
-<mat-form-field appearance="fill">
-  <mat-label>Favorite food</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{ food.viewValue }}
+<mat-form-field [formGroup]="parentForm" appearance="fill">
+  <mat-label>{{ fieldData.label }}</mat-label>
+  <mat-select
+    [formControlName]="fieldData.controlName"
+    [value]="getField.value"
+  >
+    <mat-option *ngFor="let option of fieldData.choices" [value]="option">
+      {{ option }}
     </mat-option>
   </mat-select>
 </mat-form-field>

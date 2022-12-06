@@ -1,5 +1,9 @@
-<p>input type number</p>
-<mat-form-field class="example-full-width">
-  <mat-label>number</mat-label>
-  <input matInput #postalCode type="number" />
+<mat-form-field [formGroup]="parentForm" class="example-full-width">
+  <mat-label>{{ fieldData.label }}</mat-label>
+  <input
+    [name]="fieldData.controlName"
+    [formControlName]="fieldData.controlName"
+    [value]="getField.value"
+    matInput
+  />
 </mat-form-field>

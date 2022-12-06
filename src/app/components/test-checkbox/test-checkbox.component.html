@@ -1,4 +1,9 @@
-<section class="example-section">
-  <p>Checkbox</p>
-  <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+<section [formGroup]="parentForm" class="example-section">
+  <mat-label>{{ fieldData.label }}</mat-label>
+  <mat-checkbox
+    [checked]="getField.value"
+    [formControlName]="fieldData.controlName"
+    class="example-margin"
+    >{{ fieldData.description }}</mat-checkbox
+  >
 </section>

@@ -1,6 +1,32 @@
-<section class="section">
-  <app-test-checkbox></app-test-checkbox>
-  <app-test-input></app-test-input>
-  <app-test-select></app-test-select>
-  <app-test-number></app-test-number>
-</section>
+<form *ngIf="form" [formGroup]="form" class="section">
+  <ng-container *ngFor="let item of formData$ | async">
+    <ng-container [ngSwitch]="item.componentType">
+      <ng-container *ngSwitchCase="componentType.input">
+        <ng-container [ngSwitch]="item.type">
+          <app-test-checkbox
+            [parentForm]="form"
+            [fieldData]="item"
+            *ngSwitchCase="fieldType.checkbox"
+          ></app-test-checkbox>
+          <app-test-input
+            [parentForm]="form"
+            [fieldData]="item"
+            *ngSwitchCase="fieldType.text"
+          ></app-test-input>
+          <app-test-number
+            [parentForm]="form"
+            [fieldData]="item"
+            *ngSwitchCase="fieldType.number"
+          ></app-test-number>
+        </ng-container>
+      </ng-container>
+      <ng-container *ngSwitchCase="componentType.select">
+        <app-test-select
+          [parentForm]="form"
+          [fieldData]="item"
+        ></app-test-select>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+  <button mat-raised-button color="accent">Submit</button>
+</form>
