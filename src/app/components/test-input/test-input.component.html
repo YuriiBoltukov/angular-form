@@ -3,7 +3,13 @@
   <input
     matInput
     required
+    autocomplete="off"
+    type="text"
     [formControlName]="fieldData.controlName"
     [value]="getField.value"
+    [placeholder]="fieldData.description"
   />
+  <mat-error *ngIf="parentForm.get(fieldData.controlName).invalid"
+    >Поле обязательно для заполнения</mat-error
+  >
 </mat-form-field>

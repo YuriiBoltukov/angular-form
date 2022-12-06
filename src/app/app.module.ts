@@ -11,6 +11,7 @@ import { TestCheckboxComponent } from './components/test-checkbox/test-checkbox.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -35,6 +36,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatButtonModule,
     HttpClientModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

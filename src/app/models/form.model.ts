@@ -8,6 +8,8 @@ export interface FormField {
   disabled: boolean;
   required: boolean;
   value: string | boolean;
+  max?: number;
+  min?: number;
 }
 
 export enum ComponentType {
